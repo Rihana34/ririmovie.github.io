@@ -1,0 +1,25 @@
+:root {
+    --color-black-subtle: #5895db;
+}
+
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+    /* scrollbar color */
+    scrollbar-color: var(--color-black-subtle);
+}
+.vh-85 {
+    height: 85vh !important;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image/wp3901169.jpg');
+            background-position: center;
+            background-size: cover;
+            z-index: 999;
+}
+
+.w-20px {
+    width: 20px !important;
+}
+.row{
+    background-color: whitesmoke;
+    border-radius: 10px;
+}

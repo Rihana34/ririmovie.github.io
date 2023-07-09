@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie site</title>
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/android-chrome-512x512.png">
+    <link rel="stylesheet" href="tv.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body class="bodybg">
+    <header>
+        
+    </header>
+    <main class="container-fluid "> 
+        <div class="row vh-85" id="searchComponentContainer">
+            <div class="col-12 d-flex flex-column justify-content-center align-items-center  position-relative" id="searchComponent">
+                <h1 class="display-2 fw-normal text-white">YOUR BEST MOVIE SITE</h1>
+                <p class="lead text-white" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">WELL-COME OUR VIEWERS<br> Search and get what you need!</p>
+
+                <div class="input-group w-50 my-2">
+                    <select id="searchType" class="form-select-sm border border-1">
+                        
+                        <option value="movie">Movies</option>
+                        <option value="tv">Tv</option>
+                    </select>
+                    <input type="text" class="form-control py-2" id="searchInput" placeholder="Search for Movies">
+                    <button class="btn btn-success" type="button" id="searchButton"><i class="fas fa-search"></i></button>
+                </div>        
+                
+                <span id="searchError"></span>       
+            </div>
+        </div>
+        
+    </main>
+
+    <section class="container my-5">
+
+        <div id="searchResultsComponent" class="row d-none animate__animated animate__fadeIn">
+            <div class="col-12 d-flex justify-content-between">
+                <h2 class="fw-bold" id="searchResultsTitle">Search Results</h2>
+                <button class="btn btn-dark btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#searchResultsList" aria-expanded="true" aria-controls="searchResultsList">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+            <div id="searchResultsList" class="row py-3">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="modal fade" id="TVShowsDetailsModal" tabindex="-1" aria-labelledby="TVShowsDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content text-dark" id="TVShowsDetailsModalContent">
+
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="d-none vh-100 vw-100 d-flex justify-content-center align-items-center position-fixed top-0" id="loadingSpinner">
+        <div class="spinner-border text-warning" role="status">
+            
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous" defer ></script>
+    <script src="maze.js" defer></script>
+
+
+</body>
+</html>
